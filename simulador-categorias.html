@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Cadastro de Categorias</title>
+</head>
+<body>
+
+    <script>
+        let quantidade = prompt("Quantas categorias você deseja cadastrar?");
+        quantidade = Number(quantidade);
+
+        if (isNaN(quantidade) || quantidade <= 0) {
+            alert("Por favor, digite um número válido maior que zero!");
+        } else {
+            for (let i = 1; i <= quantidade; i++) {
+                let nomeCategoria = prompt("Digite o nome da categoria " + i + ":");
+                
+                if (nomeCategoria == null || nomeCategoria.trim() === "") {
+                    console.log("Erro: O nome da categoria não pode ser vazio!");
+                } else {
+                    console.log("Categoria " + nomeCategoria.trim() + " cadastrada com sucesso!");
+                }
+            }
+        }
+
+        alert("Finalizado! Verifique o log de cadastros no F12.");
+    </script>
+
+</body>
+</html>
